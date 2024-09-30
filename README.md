@@ -4,7 +4,7 @@ Fantasy Football Team
 Sahil Panchal - 811952439 - https://github.com/SahilPnc/MIST-4610-Project-1-  
 Dru Hunt - 811481261 - https://github.com/lwh12347/Mist-4610  
 Yonatan Woldetenssaie - 811294688 - https://github.com/YonatanWoldetenssaie/FantasyFootball  
-Kent Tran - 811696100 - https://github.com/Kenttra/MIST-4610-P1
+Kent Tran - 811696100 - https://github.com/Kenttra/MIST-4610-P1  
 Shaan Bhagat - 811542876 - https://github.com/Shaan-Bhagat/MIST-4610-Project-1
 
 #### Project Description
