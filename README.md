@@ -130,8 +130,10 @@ Linked to League through LeagueID.
 ![Q6](https://github.com/YonatanWoldetenssaie/FantasyFootball/blob/main/Query6.PNG)
 
 #7.The query is designed to help identify players who have scored more points than the average player in their respective leagues. This query is useful to see which players are playing at a high level for those looking to improve their team
+![Q7](https://github.com/Shaan-Bhagat/MIST-4610-Project-1/blob/main/q7.png)
 
 #8.The query is designed to help identify how much each position scores, on average, in each league. This query is useful to see which what positions might be lacking in certain leagues and if the leagues should look for better players at certain positions.
+![Q8](https://github.com/Shaan-Bhagat/MIST-4610-Project-1/blob/main/q8.png)
 
 #9.This query finds teams whose average points scored are higher than league-wide average points scored by all teams. This query is useful for identifying high performing managers that drafted their teams well. 
 ![Q9](https://github.com/SahilPnc/MIST-4610-Project-1-/blob/main/Q9.png)
