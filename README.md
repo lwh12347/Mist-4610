@@ -124,9 +124,10 @@ Linked to League through LeagueID.
 ![Q4](https://github.com/lwh12347/Mist-4610/blob/main/Q4.png)
 
 #5.This complex query identifies players who have at least played one game during the season and had noteworthy games where they scored a lot of points. Its results contain the team of the player, name of the player, how many points they score ,and the date they accomplished it. This would be used to help fantasy football players to choose players who are currently active and are relatively good to choose for their fantasy team. 
-
+![Q5](https://github.com/YonatanWoldetenssaie/FantasyFootball/blob/main/Query5.PNG) 
 
 #6.This simple query shows player performance in a given game and how many fantasy points, a person would gain from having that player on their fantasy team. PlayerStatistics.GameID can be changed to equal any specific GameID, so that data from any game week can be tracked efficiently. 
+![Q6](https://github.com/YonatanWoldetenssaie/FantasyFootball/blob/main/Query6.PNG)
 
 #7.The query is designed to help identify players who have scored more points than the average player in their respective leagues. This query is useful to see which players are playing at a high level for those looking to improve their team
 
