@@ -19,22 +19,31 @@ Our team decided to model a database that supports fantasy football analysis, fo
 ![Dic 7](https://github.com/SahilPnc/MIST-4610-Project-1-/blob/main/Screenshot%202024-09-30%20at%201.03.10%20AM.png)
 ![Dic 8](https://github.com/SahilPnc/MIST-4610-Project-1-/blob/main/Screenshot%202024-09-30%20at%201.03.14%20AM.png)
 ### Queries
-#1. Join Player data with PlayerStatistics data.
+#1.This query joins Player and PlayerStatistics tables based on the PlayerID and retrieves player information, such as name, position and team and also retrieves their game statistics, such as yards and touchdowns. This is useful to compare each players statistics.
 ![Q1](https://github.com/Kenttra/MIST-4610-P1/blob/main/Q1)
 
-#2. Sort by positions in the data.
+#2.This query selects all columns from the Player table where the players position matches “QB” using REGEXP. This is useful to sort out each position in the data.
 ![Q2](https://github.com/Kenttra/MIST-4610-P1/blob/main/Q2)
 
-#3.Select all teams and sum up their total wins.
+#3.Selects all teams and finds their total number of wins. This is useful to see which teams are performing the best and worst at any given time. And the managers can decide whether or not they should trade.
 ![Q3](https://github.com/lwh12347/Mist-4610/blob/main/Q3.png)
 
-#4.Select all teams whose average points are above 80.
+#4.Selects only teams who score an average greater than 80 points. This query is useful for displaying scoring numbers across the league. This type of query is important for determining which teams perform at a certain level to show the general performance of the league while excluding outliers.
 ![Q4](https://github.com/lwh12347/Mist-4610/blob/main/Q4.png)
 
-#9.Select teams whose average points scored are higher than league-wide average points scored by all teams.
+#5.This complex query identifies players who have at least played one game during the season and had noteworthy games where they scored a lot of points. Its results contain the team of the player, name of the player, how many points they score ,and the date they accomplished it. This would be used to help fantasy football players to choose players who are currently active and are relatively good to choose for their fantasy team. 
+
+
+#6.This simple query shows player performance in a given game and how many fantasy points, a person would gain from having that player on their fantasy team. PlayerStatistics.GameID can be changed to equal any specific GameID, so that data from any game week can be tracked efficiently. 
+
+#7.The query is designed to help identify players who have scored more points than the average player in their respective leagues. This query is useful to see which players are playing at a high level for those looking to improve their team
+
+#8.The query is designed to help identify how much each position scores, on average, in each league. This query is useful to see which what positions might be lacking in certain leagues and if the leagues should look for better players at certain positions.
+
+#9.This query finds teams whose average points scored are higher than league-wide average points scored by all teams. This query is useful for identifying high performing managers that drafted their teams well. 
 ![Q9](https://github.com/SahilPnc/MIST-4610-Project-1-/blob/main/Q9.png)
 
-#10.Retrieve the list of free agent players from the Player table and sort them by their position.
+#10.This query shows the players that are available as free agents and sorts them by their positions for simplicity. This is useful in identifying which players are not currently on rosters and can be picked up on waivers to improve a fantasy roster in the event of underperforming players, bye weeks, or injury. 
 ![Q10](https://github.com/SahilPnc/MIST-4610-Project-1-/blob/main/Q10.png)
 
 ### Matrix
