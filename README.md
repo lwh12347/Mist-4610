@@ -7,6 +7,96 @@ Yonatan Woldetenssaie - 811294688 - https://github.com/YonatanWoldetenssaie/Fant
 Kent Tran - 811696100 - https://github.com/Kenttra/MIST-4610-P1
 #### Project Description
 Our team decided to model a database that supports fantasy football analysis, focusing on player statistics, game outcomes, and team performance across multiple leagues. In our project's database design, we created 12 entities to encapsulate all relevant information, establishing relationships between these entities to form a comprehensive data model.From the perspective of a fantasy football league, we modeled teams, players, and games to represent the core components of player statistics and team performance. From there, we introduced entities that manage player scoring data, game results, and player rankings to facilitate performance tracking and comparison across teams.On the analysis side of the model, we created entities to evaluate player performance, such as weekly projections and player health status, helping to predict future outcomes and identify potential draft picks or trades. Additionally, we integrated a system to track league standings, manage team rosters, and evaluate player performance metrics, enabling more informed decisions for team management and roster adjustments.This scenario illustrates how our solution provides a comprehensive framework for managing fantasy football data, tracking player statistics, league performance, and optimizing team decisions. It helps identify trends in player performance, set up teams, and even predict future outcomes based on historical data.
+
+1. Player Table
+Purpose: Holds details of individual NFL players, including their name, position, NFL team, and birthdate.
+Key Fields:
+PlayerID: Primary key, unique identifier for each player.
+Name: Name of the player.
+Position: The player's position (e.g., QB, RB, WR, etc.).
+ProTeam: The NFL team to which the player belongs.
+BirthDate: The player's birthdate.
+Relationships:
+Linked to PlayerStatistics through PlayerID to track individual game statistics.
+Linked to Roster through PlayerID to assign players to fantasy football teams.
+2. Team Table
+Purpose: Represents fantasy football teams that participate in leagues.
+Key Fields:
+TeamID: Primary key, unique identifier for each fantasy team.
+TeamName: The name of the fantasy team.
+Owner: The name of the team’s owner.
+LeagueID: Foreign key, linking each team to a league.
+TotalPoints: The total points accumulated by the team across the fantasy season.
+Relationships:
+Linked to League through LeagueID to place the team in a specific league.
+Linked to Roster through TeamID to manage which players are on the team.
+Linked to TeamPerformance through TeamID to track the team's performance during the season.
+Linked to Matchup through TeamID to participate in weekly matchups.
+3. League Table
+Purpose: Represents different fantasy football leagues in which teams compete.
+Key Fields:
+LeagueID: Primary key, unique identifier for each league.
+LeagueName: The name of the fantasy football league.
+Rules: Rules governing the league (e.g., PPR, standard).
+Relationships:
+Linked to Team through LeagueID to assign teams to specific leagues.
+Linked to Matchup through LeagueID to manage weekly matchups within each league.
+4. Roster Table
+Purpose: Tracks the players assigned to each fantasy football team during a specific week.
+Key Fields:
+RosterID: Primary key, unique identifier for each roster record.
+TeamID: Foreign key, linking the roster to a specific fantasy team.
+PlayerID: Foreign key, linking the roster to a specific NFL player.
+Week: The week number during which the player is part of the team.
+Relationships:
+Linked to Player through PlayerID.
+Linked to Team through TeamID.
+5. Game Table
+Purpose: Tracks individual NFL games.
+Key Fields:
+GameID: Primary key, unique identifier for each NFL game.
+Date: The date of the game.
+HomeTeam: The home team in the game.
+AwayTeam: The away team in the game.
+Relationships:
+Linked to PlayerStatistics through GameID to record player statistics for the game.
+Linked to TeamPerformance through GameID to record team performance for the game.
+6. PlayerStatistics Table
+Purpose: Tracks the individual statistics for players in each game.
+Key Fields:
+StatID: Primary key, unique identifier for each player's statistics record.
+PlayerID: Foreign key, linking the statistics to a player.
+GameID: Foreign key, linking the statistics to an NFL game.
+Points: Points scored by the player in the game.
+Yards: Total yards gained by the player in the game.
+Touchdowns: Total touchdowns scored by the player in the game.
+Relationships:
+Linked to Player through PlayerID.
+Linked to Game through GameID.
+7. TeamPerformance Table
+Purpose: Tracks the performance of fantasy football teams during specific weeks.
+Key Fields:
+PerformanceID: Primary key, unique identifier for each performance record.
+TeamID: Foreign key, linking the performance to a specific fantasy team.
+Week: The week number during which the performance occurred.
+PointsScored: Points scored by the team in a specific week.
+OpponentTeamID: Foreign key, linking to the opposing team in the matchup.
+Result: The result of the game (win/loss/tie).
+Relationships:
+Linked to Team through TeamID.
+Linked to Game through GameID.
+8. Matchup Table
+Purpose: Tracks weekly matchups between fantasy football teams within a league.
+Key Fields:
+MatchupID: Primary key, unique identifier for each matchup.
+Week: The week number of the fantasy season.
+Team1ID: Foreign key, linking the matchup to the first team.
+Team2ID: Foreign key, linking the matchup to the second team.
+Result: The result of the matchup (e.g., Team 1 wins, Team 2 wins).
+LeagueID: Foreign key, linking the matchup to a specific league.
+Relationships:
+Linked to Team through Team1ID and Team2ID.
+Linked to League through LeagueID.
 ### Data Model 
 ![Data_Model](https://github.com/SahilPnc/MIST-4610-Project-1-/blob/main/Datamodel.png)
 ### Data Dictionary
